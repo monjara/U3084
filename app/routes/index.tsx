@@ -1,7 +1,5 @@
+import U3084 from '~/components/u3084'
+
 export default function Index() {
-  return (
-    <div className='w-screen h-screen bg-black'>
-      <p className='text-white'>hello, world!</p>
-    </div>
-  )
+  return <U3084 />
 }
