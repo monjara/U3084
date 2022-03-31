@@ -1,5 +1,6 @@
 import {
   Links,
+  LinksFunction,
   LiveReload,
   Meta,
   Outlet,
@@ -21,7 +22,7 @@ export const links: LinksFunction = () => [
 
 export default function App() {
   return (
-    <html lang='en'>
+    <html lang='ja'>
       <head>
         <Meta />
         <Links />
