@@ -1,15 +1,14 @@
 import { useState } from 'react'
 
 export default function U3084() {
-  const [x, setX] = useState('')
-  const [y, setY] = useState('')
+  const [x, setX] = useState(0)
+  const [y, setY] = useState(0)
   const handleClick = (
     e: React.MouseEvent<HTMLDivElement, MouseEvent>
   ) => {
-    const cX = e.clientX.toString()
-    const cY = e.clientY.toString()
-    setX(cX)
-    setY(cY)
+    const {clientX, clientY} = e;
+    setX(clientX)
+    setY(clientY)
     console.log(x, y)
   }
 
