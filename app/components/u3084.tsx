@@ -40,7 +40,7 @@ const SvgText = memo<SvgTextProps>(({ ...svgText }) => {
 })
 
 const U3084 = memo(() => {
-  const [textProps, setTextProps] = useState<SvgTextProps[]>([])
+  const [svgTextProps, setSvgTextProps] = useState<SvgTextProps[]>([])
 
   const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     const { clientX: left, clientY: top } = e
@@ -62,8 +62,8 @@ const U3084 = memo(() => {
     )`
     const fontWeight = (Math.random() * 500).toString()
 
-    setTextProps([
-      ...textProps,
+    setSvgTextProps([
+      ...svgTextProps,
       {
         width,
         height,
@@ -80,10 +80,10 @@ const U3084 = memo(() => {
 
   return (
     <div className='w-screen h-screen bg-black' onClick={(e) => handleClick(e)}>
-      {textProps.map((text, index) => {
+      {svgTextProps.map((svgText, index) => {
         return (
           <Fragment key={index}>
-            <SvgText {...text} />
+            <SvgText {...svgText} />
           </Fragment>
         )
       })}
