@@ -42,9 +42,11 @@ const SvgText = memo<SvgTextProps>(({ ...svgText }) => {
 const U3084 = memo(() => {
   const [svgTextProps, setSvgTextProps] = useState<SvgTextProps[]>([])
 
+  const generateRandomNum = (num: number) => Math.random() * num
+
   const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     const { clientX: left, clientY: top } = e
-    const numWidth = Math.random() * 500
+    const numWidth = generateRandomNum(500)
     const numHeight = numWidth * 0.88
     const numX = numWidth * 0.5
     const numY = numWidth * 0.82
@@ -56,9 +58,9 @@ const U3084 = memo(() => {
     const y = numY.toString()
     const fontSize = numFontSize.toString()
     const fill = `RGB(
-        ${Math.random() * 256}, 
-        ${Math.random() * 256},
-        ${Math.random() * 256}
+        ${Math.floor(generateRandomNum(256))}, 
+        ${Math.floor(generateRandomNum(256))},
+        ${Math.floor(generateRandomNum(256))}
     )`
     const fontWeight = (Math.random() * 500).toString()
 
