@@ -83,17 +83,7 @@ const U3084 = memo(() => {
       {textProps.map((text, index) => {
         return (
           <Fragment key={index}>
-            <SvgText
-              width={text.width}
-              height={text.height}
-              left={text.left}
-              top={text.top}
-              x={text.x}
-              y={text.y}
-              fill={text.fill}
-              fontSize={text.fontSize}
-              fontWeight={text.fontWeight}
-            />
+            <SvgText {...text} />
           </Fragment>
         )
       })}
